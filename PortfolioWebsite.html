@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+
+#navLogo {
+    color: #ffffff;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #4b6cc1;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Roboto";
+    font-size: 24px;
+}
+
+#navItem1 {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#navItem2 {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#navItem3 {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#navItem4 {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#navItem5 {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.card-container {
+    background-color: #191a1d;
+    height: 100vh;
+}
+
+.img {
+    width: 180px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.heading {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.span {
+    color: #4b6cc1;
+}
+
+.paragraph {
+    color: #9aa5b1;
+    font-size: 24px;
+    font-family: "Roboto";
+}
+
+.button {
+    background-color: #4b6cc1;
+    color: #ffffff;
+    height: 45px;
+    width: 130px;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 8px;
+}
+  
+.about-me-section {
+    background-color: #323f4b;
+}
+
+.about-me-section-sub-heading {
+    color: #cced00;
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.about-me-section-heading {
+    color: #ffffff;
+    font-size: 36px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.about-me-section-image {
+    width: 300px;
+    text-align: center;
+}
+
+.about-me-section-description {
+    color: #9aa5b1;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.skills-section {
+    background-color: #1f2933;
+}
+
+.skills-section-sub-heading {
+    color: #cced00;
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.skills-card {
+    background-color: #323f4b;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.skills-card-image {
+    height: 64px;
+    width: 64px;
+}
+
+.skills-card-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.projects-section {
+    background-color: #3e4c59;
+}
+
+.projects-section-sub-heading {
+    color: #cced00;
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.projects-section-heading {
+    color: #ffffff;
+    font-size: 36px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.projects-card {
+    background-color: #323f4b;
+    border-radius: 8px;
+}
+
+.projects-card-image {
+    width: 100%;
+}
+
+.projects-card-sub-title {
+    color: #9aa5b1;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.projects-card-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: "Roboto";
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.projects-card-description {
+    color: #9aa5b1;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+.projects-card-link {
+    color: #cced00;
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+
+.service-section {
+    background-color: #3e4c59;
+}
+
+.service-section-sub-heading {
+    color: #cced00;
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.service-section-heading {
+    color: #ffffff;
+    font-size: 36px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.projects-card {
+    background-color: #323f4b;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.projects-card-image {
+    width: 48px;
+    height: 48px;
+
+}
+
+.projects-card-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: "Roboto";
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.projects-card-description {
+    color: #9aa5b1;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+.work-done-section {
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-work-done-bg.png");
+    background-size: cover;
+}
+
+.hr-line {
+    background-color: white;
+    width: 60px;
+}
+
+.work-done-card-title {
+    color: white;
+    font-family: "Roboto";
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.work-done-card-sub-title {
+    color: white;
+    font-family: "Roboto";
+    font-size: 16px;
+
+}
+
+.testimonials-section {
+    background-color: #1f2933;
+    padding: 40px;
+}
+
+.testimonials-sub-heading {
+    color: #cced00;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Roboto";
+}
+
+.testimonials-heading {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: "Roboto";
+}
+
+.testimonials-card {
+    background-color: #323f4b;
+    padding: 20px;
+}
+
+.testominals-card-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.testimonials-card-description {
+    color: #9aa5b1;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: "Roboto";
+}
+
+.testimonials-card-heading {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Roboto";
+}
+
+.footer-section {
+    background-color: #19232d;
+    background-size: cover;
+    height: 100vh;
+}
+
+.footer-card-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.footer-section-icon-container {
+    background-color: #202336;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 25px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.footer-section-copyright {
+    color: #959ead;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+
+.footer-section-heading {
+    color: #5a7184;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+}
+.section-section-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.footer-section-text {
+    color: #5a7184;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto";
+    margin-bottom: 5px;
+}
+
+.icon {
+    color: white;
+    font-size: 18px;
+}
+.horizontal-line{
+    background-color: #5a7184;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+        <a class="navbar-brand nav-logo" href="#" id="navLogo">S.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" href="#" id="navItem1">
+                    Home
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-link" href="#aboutmeSection" id="navItem2">About me</a>
+                <a class="nav-link" href="#projectsSection" id="navItem3">Projects</a>
+                <a class="nav-link" href="#serviceSection" id="navItem4">Services</a>
+                <a class="nav-link" href="#testimonialSection" id="navItem5">Testimonial</a>
+                <a class="nav-link" href="#contactSection" id="navItem2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <div class="card-container d-flex flex-column justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 order-1 order-md-2">
+                    <img src="C:\Users\sneha\OneDrive\Desktop\.html\my photo\my photo.jpeg" class="img" />
+                </div>
+                <div class="col-12 col-md-7 order-2 order-md-1 d-flex flex-column justify-content-center">
+                    <h1 class="heading mb-3">Hey, I am <span class="span">sneha</span></h1>
+                    <p class="paragraph mb-3">I am a Fronted Developer.</p>
+                    <button class=" button">Contact Me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-me-section pt-5 pb-5" id="aboutmeSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 order-1 order-md-2 d-flex flex-column justify-content-center">
+                    <h1 class="about-me-section-sub-heading mb-3">Facts</h1>
+                    <h1 class="about-me-section-heading mb-3">About me</h1>
+                    <img src="C:\Users\sneha\OneDrive\Desktop\.html\my photo\my photo.jpeg" class="about-me-section-image d-md-none mb-3" />
+                    <p class="about-me-section-description"> My name is Sneha Arzary, i'm currently pursuing degree in a BCA at Dr. CV Raman University Khandwa. My passion is learning more things and skills and reading books
+                        My goal is to work in a IT sector Where I can apply my thought and skills to make meaning full impact, currently I'm a web developer with a Passion 
+                        for creating stunning 3d animations and interactive user experiences, and I am currently Looking for a job in
+                        Frontend Development. <br/><br/>
+                        I am a dedicated person with a family of four. I enjoy reading, and the knowledge and perspective that my reading gives me have strengthened my teaching skills
+                         and presentation abilites.
+                </div>
+                <div class="col-12 col-md-6 orer-2 order-md-1 d-md-block d-none">
+                 <img src="C:\Users\sneha\OneDrive\Desktop\.html\my photo\my photo.jpeg" class="about-me-section-image d-md-block mb-3" />
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="skills-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="skills-section-sub-heading mb-3">Skills : </h1>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="shadow skills-card text-center mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-html-img.png" class="skills-card-image" />
+                        <h1 class="skills-card-title">HTML</h1>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="shadow skills-card text-center mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-css-img.png" class="skills-card-image" />
+                        <h1 class="skills-card-title">CSS</h1>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="shadow skills-card text-center mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-bootstrap-img.png" class="skills-card-image" />
+                        <h1 class="skills-card-title">Bootstrap</h1>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="shadow skills-card text-center mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-js-img.png" class="skills-card-image" />
+                        <h1 class="skills-card-title">JS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects-section pt-5 pb-5" id="projectsSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="projects-section-sub-heading mb-3">Portfolio</h1>
+                    <h1 class="projects-section-heading">Projects I have done</h1>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="projects-card mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-project-1-img.png" class="projects-card-image" />
+                        <div class="p-3">
+                            <p class="projects-card-sub-title">web design</p>
+                            <h1 class="projects-card-title">Royal Grand Hotel</h1>
+                            <p class="projects-card-description">Royal Grand Hotel is a Simple
+                                Static Website. We can use this layout for building the other websites...<br /><br />
+                            </p>
+                            <a href="" class="projects-card-link">
+                                Read More
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill=" #cced00" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="projects-card mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-project-2-img.png" class="projects-card-image" />
+                        <div class="p-3">
+                            <p class="projects-card-sub-title">web design</p>
+                            <h1 class="projects-card-title">Happy Meals</h1>
+                            <p class="projects-card-description">Happy Meals is the best-in-class food ordering page today.
+                                With interactive UI/UX and simple call to actions...
+                            </p>
+                            <a href="" class="projects-card-link">
+                                Read More
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill=" #cced00" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="service-section pt-5 pb-5" id="serviceSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="service-section-sub-heading mb-3">Services</h1>
+                    <h1 class="service-section-heading">What I do</h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="projects-card mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-web-design-img.png" class="projects-card-image" />
+                        <div class="p-3">
+                            <h1 class="projects-card-title mt-2">Static Websites</h1>
+                            <p class="projects-card-description">A Static Website contains Web
+                                pages with fixed content. Each page is developed using HTML and
+                                CSS and displays the same information to every visitor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="shadow projects-card mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-web-development-img.png" class="projects-card-image" />
+                        <div class="p-3">
+                            <h1 class="projects-card-title mt-2">Responsive Web design</h1>
+                            <p class="projects-card-description">Responsive Web design is the approach
+                                that suggests that design and development should respond to the user's
+                                behaviour and environment based on screen size, platform and orientation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="projects-card mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-customize-img.png" class="projects-card-image" />
+                        <div class="p-3">
+                            <h1 class="projects-card-title mt-2">Customisable Layouts</h1>
+                            <p class="projects-card-description">Customisable sites are templates with set layouts. You may be able to change photos
+                                and colors, but your site will look similar to many other sites due to
+                                the template. The same goes for...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="work-done-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#ffffff" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                        <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                    </svg>
+                    <hr class="hr-line" />
+                    <h1 class="work-done-card-title">10</h1>
+                    <p class="work-done-card-sub-title">Projects Completed</p>
+                </div>
+                <div class="col-4 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#ffffff" class="bi bi-file-text" viewBox="0 0 16 16">
+                        <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z" />
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1" />
+                    </svg>
+                    <hr class="hr-line" />
+                    <h1 class="work-done-card-title">2,800</h1>
+                    <p class="work-done-card-sub-title">Lines of code</p>
+                </div>
+                <div class="col-4 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#ffffff" class="bi bi-clock" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z" />
+                        <path fill-rule="evenodd" d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                    <hr class="hr-line" />
+                    <h1 class="work-done-card-title">15</h1>
+                    <p class="work-done-card-sub-title">Hours Worked</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials-section pb-5 pt-5" id="testimonialSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="testimonials-sub-heading">Testimonials</p>
+                    <h1 class="testimonials-heading">Our Members Says</h1>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonials-card text-center">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-testimonials-1-img.png" class="testominals-card-img" alt="...">
+                                    <p class="testimonials-card-description">Sneha is one of the best hard-working developers, and it was a pleasure working with him. Having
+                                        him on the project certainly made everything run smoother.</p>
+                                    <h1 class="testimonials-card-heading">-Gautham, founder of CocoPay Company</h1>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonials-card text-center">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-testimonials-2-img.png" class="testominals-card-img" alt="...">
+                                    <p class="testimonials-card-description">Working with Sneha was an excellent experience.
+                                        He is an incredibly talented developer and what makes him stand out is his work ethic and
+                                        steady approach</p>
+                                    <h1 class="testimonials-card-heading">-Rakesh, Co-developer in Veriphy Company</h1>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonials-card text-center">
+                                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-testimonials-3-img.png" class="testominals-card-img" alt="...">
+                                    <p class="testimonials-card-description">I have worked with Sneha on two complex projects, and in both cases,
+                                        the projects are done in a timely fashion and delivered with excellent customer satisfaction.</p>
+                                    <h1 class="testimonials-card-heading">-Riya, Co-founder of CocoPay Company</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-right">
+                            <a href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-section  pt-5 pb-5" id="contactSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="text-center text-md-left">
+                        <img src="C:\Users\sneha\OneDrive\Desktop\.html\my photo\my photo.jpeg" 
+                         class="footer-card-img" />
+                         <div class="d-flex flex-row justify-content-center justify-content-md-start mt-3 mb-3">
+                            <div class="footer-section-icon-container">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <div class="footer-section-icon-container">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="footer-section-icon-container">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="footer-section-icon-container">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                        </div>
+                        <p class="footer-section-text">Radha Krishna Vihar Mundi, Khandwa, India.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 mt-3">
+                    <h1 class="footer-section-heading pb-2">Contact Us</h1>
+                    <ul class="footer-section-list">
+                        <li class="mb-3">
+                            <i class="fa fa-envelope icon mr-2"></i>
+                            <span class="footer-section-text">snehaarzare@gmail.com</span>
+                        </li>
+                        <li class="mb-3">
+                            <i i class="fa fa-phone-alt icon mr-2"></i>
+                            <span class="footer-section-text">6260870447</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fa fa-skype icon mr-2"></i>
+                            <span class="footer-section-text">Sneha Arzary</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 mt-3">
+                    <h1 class="footer-section-heading pb-2">Let Us Help You</h1>
+                    <ul class="footer-section-list">
+                        <li class="footer-section-text">Protection</li>
+                        <li class="footer-section-text">Your Account</li>
+                        <li class="footer-section-text">Return Center</li>
+                        <li class="footer-section-text">Help</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="horizontal-line" />
+            <div class="text-center">
+                <i class="fa fa-copyright  icon" aria-hidden="true"></i>
+                <span class="footer-section-copyright">2023 by Sneha Arzary. Created with Bootsrap.</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
